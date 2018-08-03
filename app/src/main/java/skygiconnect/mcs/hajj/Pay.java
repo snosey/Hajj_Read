@@ -32,6 +32,7 @@ public class Pay extends Fragment {
     public void onViewClicked() {
         FragmentManager fm = getActivity().getSupportFragmentManager();
         WriteCode fragment = new WriteCode();
+        fragment.setArguments(getArguments());
         FragmentTransaction ft = fm.beginTransaction();
         ft.replace(R.id.fragment, fragment, "WriteCode");
         ft.addToBackStack("WriteCode");
